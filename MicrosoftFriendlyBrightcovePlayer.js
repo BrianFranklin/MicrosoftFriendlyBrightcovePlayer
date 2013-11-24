@@ -4,7 +4,8 @@
  * 
  * This script enhances Brightcove Smart Player embed logic to allow Xbox One and Windows Phone HTML5 fallback
  */
-
+ 
+// isSupportedHTMLDevice has had Xbox One and WPDesktop added to the supported user agent types
 brightcove.isSupportedHTMLDevice = function (pUAString) {
     var types = ["iPad", "iPhone", "iPod", "android", "Silk", "Xbox One", "WPDesktop"];
     var numTypes = types.length;
@@ -17,6 +18,7 @@ brightcove.isSupportedHTMLDevice = function (pUAString) {
     return false;
 };
 
+// isMetroIE detects Modern IE mode on Windows 8 and RT to use whitelisted Flash players. This will also return true for Xbox One and Windows Phone, so we want to skip this logic.
 brightcove.isMetroIE = function () {
     var version = 0;
     if (navigator.appVersion.indexOf("Xbox One") != -1 || navigator.appVersion.indexOf("WPDesktop") != -1) {
