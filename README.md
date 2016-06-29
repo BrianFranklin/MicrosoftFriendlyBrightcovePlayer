@@ -1,3 +1,5 @@
+**NOTE: This utility was made before the existence of the modern "Perform" or "Brightcove Player" naming. This utility is specific to the older generation of players known as "Smart Players" and should not be used with current Brightcove video players. Newer players already support modern MS environments.**
+
 Modified Brightcove Smart Player Javascript file that supports the use of smart players on Xbox One and Windows Phone
 
 
